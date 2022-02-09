@@ -1,0 +1,27 @@
+<div class="loading-shade" *ngIf="running">
+  <mat-progress-spinner mode="determinate" [value]="percentComplete" diameter="50"></mat-progress-spinner>
+</div>
+<div class="cloudapp-actions">
+  <button mat-flat-button type="button" color="secondary" (click)="reset()">Reset</button>
+  <button mat-flat-button type="button" color="primary" (click)="load()" [disabled]="files.length==0 || !!results">Load requests</button>
+</div>
+
+<h2 *ngIf="!results">Create a report in Analytics and export to a CSV file.<br>
+  Sample report:<br>
+  MMS Id,Holding Id,Physical Item Id,Request Id<br>
+  111,222,333,444<br>
+  555,,,666
+</h2>
+
+<div *ngIf="!results">
+<ngx-dropzone (change)="onSelect($event)" accept=".csv" [multiple]=false>
+  <ngx-dropzone-label>Drag a CSV file or click to browse</ngx-dropzone-label>
+  <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+    <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
+  </ngx-dropzone-preview>
+</ngx-dropzone>
+</div>
+
+<div *ngIf="results.length > 0 && !running">
+  <textarea readonly [(ngModel)]="results"></textarea>
+</div>
