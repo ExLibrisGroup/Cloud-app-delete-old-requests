@@ -1,7 +1,7 @@
 {
    "id": "delete-old-requests",
    "title": "Delete Old Requests",
-   "subtitle": "Delete old requests from csv file",
+   "subtitle": "Delete old requests from CSV file",
    "author": "Ex Libris",
    "fullscreen": {
       "allow": true,
