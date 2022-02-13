@@ -6,5 +6,9 @@
    "fullscreen": {
       "allow": true,
       "open": false
+   },
+   "icon": {
+      "type": "font",
+      "value": "fa fa-ban"
    }
 }
