@@ -8,7 +8,7 @@
       "open": false
    },
    "icon": {
-      "type": "font",
-      "value": "fa fa-ban"
+      "type": "url",
+      "value": "/assets/logo.png"
    }
 }
