@@ -4,3 +4,7 @@ export interface inputRow {
     'Physical Item Id': string;
     'Request Id': string;
 }
+
+export interface inputRowPurchaseRequest {
+    'Purchase Request ID': string;
+}

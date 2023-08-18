@@ -1,6 +1,6 @@
 # Cloud-app-delete-old-requests
  
- This cloud app delete old requests from CSV file.<br>
+ This cloud app delete old requests and purchase requests from CSV file.<br>
  You can create a report in Analytics and export to a CSV file.<br>
  You can also create the CSV file manually.<br>
  
@@ -11,4 +11,9 @@
   
  (MMS Id and Request Id are mandatory).
 
+
+Sample CSV file report for purchase requests:
+Purchase Request ID
+111
+555
 

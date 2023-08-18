@@ -4,6 +4,7 @@
 <div class="cloudapp-actions">
   <button mat-flat-button type="button" color="secondary" (click)="reset()">Reset</button>
   <button mat-flat-button type="button" color="primary" (click)="load()" [disabled]="files.length==0 || !!results">Load requests</button>
+  <button mat-flat-button type="button" color="primary" (click)="loadPurchaseRequests()" [disabled]="files.length==0 || !!results">Load purchase requests</button>
 </div>
 
 <h2 *ngIf="!results">Create a report in Analytics and export to a CSV file.<br>
@@ -11,15 +12,21 @@
   MMS Id,Holding Id,Physical Item Id,Request Id<br>
   111,222,333,444<br>
   555,,,666
+  <br>
+  <br>
+  Sample CSV file report for purchase requests:<br>
+  Purchase Request ID<br>
+  111<br>
+  555
 </h2>
 
 <div *ngIf="!results">
-<ngx-dropzone (change)="onSelect($event)" accept=".csv" [multiple]=false>
-  <ngx-dropzone-label>Drag a CSV file or click to browse</ngx-dropzone-label>
-  <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
-    <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
-  </ngx-dropzone-preview>
-</ngx-dropzone>
+  <ngx-dropzone (change)="onSelect($event)" accept=".csv" [multiple]=false>
+    <ngx-dropzone-label>Drag a CSV file or click to browse</ngx-dropzone-label>
+    <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+      <ngx-dropzone-label>{{ f.name }}</ngx-dropzone-label>
+    </ngx-dropzone-preview>
+  </ngx-dropzone>
 </div>
 
 <div *ngIf="results.length > 0 && !running">
