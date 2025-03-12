@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CloudAppRestService, AlertService, HttpMethod } from '@exlibris/exl-cloudapp-angular-lib';
 import { Papa, ParseResult } from 'ngx-papaparse';
-import { DialogService } from 'eca-components';
+import { DialogService } from '@exlibris/eca-components';
 import { from, of } from 'rxjs';
 import { catchError, finalize, map, mergeMap, tap } from 'rxjs/operators';
 import {inputRow, inputRowPurchaseRequest} from './request.model';

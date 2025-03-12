@@ -1,8 +1,8 @@
 {
    "id": "delete-old-requests",
    "title": "Delete Old Requests and Purchase requests",
-   "author": "Ex Libris",
    "subtitle": "Delete old requests and Purchase requests from CSV file",
+   "author": "Ex Libris",
    "fullscreen": {
       "allow": true,
       "open": false
